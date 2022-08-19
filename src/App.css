@@ -1,38 +1,406 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.Navbar {
+    display: flex;
+    justify-content: right;
+    float: right;
+    width: 75%;
+    /* border: 1px solid grey; */
+    height: 92px;
+    position: fixed;
+    background: white;
+    margin-left: 24rem;
+    z-index: 999;
+    /* border: 1px solid black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar-pic {
+    width: auto;
+    margin: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-bar {
+    float: left;
+    /* border: 1px solid black; */
+    margin: auto;
+    width: 80%;
+    height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar input {
+    width: 481px;
+    height: 52px;
+    background: #FDFDFD;
+    border-radius: 60px;
+    border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background: #FEFEFE;
+    height: auto;
+    width: 339px;
+    position: fixed;
 }
+
+.sidebar-logo {
+    width: auto;
+    margin-top: 2rem;
+}
+
+.sidebar-details {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* border: 1px solid black; */
+    margin-top: 3rem;
+}
+
+.sidebar-item {
+    /* width: 286px; */
+    /* height: 48px; */
+    margin: 1rem;
+    margin-top: -25px;
+    padding: 15px;
+    border-radius: 15px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #737373;
+}
+
+.sidebar-item:hover {
+    background: #FFF6EB;
+    cursor: pointer;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFA234;
+}
+
+.sidebar-bottom {
+    margin-top: -2.5rem;
+}
+
+.sidebar-profile {
+    display: flex;
+    flex-direction: row;
+    margin: 1.2rem;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #212427;
+}
+
+.bottom-card {
+    width: 297px;
+    height: 222px;
+    /* height: auto; */
+    padding: 0.74rem;
+    background: #FFA234;
+    border-radius: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bottom-card-container {
+    margin: auto;
+    /* margin-top: -1rem; */
+}
+
+.bottom-card-details {
+    margin: 0.70rem;
+    padding: 0.88rem;
+    height: fit-content;
+}
+
+.bottom-card-details h2 {
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+.bottom-card-details p {
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+.bottom-card-button {
+    margin: auto;
+    width: 243px;
+    height: 46px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFA234;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    width: 75%;
+    display: flex;
+    float: right;
+    height: 80vh;
+    margin-top: 7rem;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-between;
+    float: left;
+    width: 60%;
+    /* border: 1px solid black; */
+    margin: 60px;
+    margin-top: -6px;
+    /* position: fixed; */
+    background: white;
+    /* z-index: 999; */
+}
+
+.option-chip {
+    width: 142px;
+    height: 52px;
+    background: #FDFDFD;
+    border-radius: 60px;
+    text-align: center;
+    border: none;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #737373;
+}
+
+.option-chip:hover {
+    border: 1px solid #FFA234;
+    cursor: pointer;
+}
+
+.page-title {
+    /* border: 1px solid black; */
+    width: fit-content;
+    margin: 3.3rem;
+    margin-top: -4.3rem;
+}
+
+.page-title h1 {
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 62px;
+    color: #212427;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+.testing {
+    display: flex;
+    width: fit-content;
+    flex-wrap: wrap;
+    margin: 2rem;
+    /* border: 1px solid red; */
+}
+
+.product-card {
+    width: 279px;
+    height: 424px;
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    border-radius: 15px;
+}
+
+/* .product-card-save {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #FCFCFC;
+    border-radius: 360px;
+} */
+
+.product-card:hover {
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 182px;
+    height: 225px;
+    margin: 15px;
+}
+
+.product-details {
+    margin: 15px;
+}
+
+.product-title {
+    width: 233px;
+    height: 44px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #212427;
+    /* margin-top: -10px; */
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    height: 18px;
+    left: 19px;
+    top: 327px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #737373;
+}
+
+.product-chip {
+    width: 60px;
+    height: 22px;
+    border: 0.55px solid #262B2F;
+    border-radius: 30px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 7px;
+    color: #212427;
+    float: right;
+}
+
+.card-bottom {
+    width: 247px;
+    height: 49px;
+    background: #FFA234;
+    border-radius: 10px;
+}
+
+.product-detail-container {
+    /* border: 1px solid red; */
+    height: 100vh;
+    float: right;
+    width: 70%;
+}
+
+.details-title {
+    width: 823px;
+    height: 74px;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+    margin: 100px;
+}
+
+.details-card {
+    display: flex;
+    flex-direction: row;
+    /* margin: 4rem; */
+    margin-top: -8rem;
+    width: 841px;
+    height: 381px;
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    border-radius: 15px;
+}
+
+.details-image img {
+    margin: 1.5rem;
+    width: 50%;
+}
+
+.details-desc {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    margin: auto;
+    width: 100%;
+}
+
+.details-desc p {
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #737373;
+}
+
+.details-name {
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.details-button {
+    width: 247px;
+    height: 49px;
+    background: #FFA234;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* .details-button:hover {
+    box-shadow: 0px 30px 30px rgba(87, 59, 45, 0.15);
+} */
