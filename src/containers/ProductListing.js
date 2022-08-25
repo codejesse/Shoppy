@@ -23,6 +23,7 @@ const ProductListing = () => {
     }, [])
 
     console.log(products);
+    
     return (
         <div className="home">
             <div className="options-container">

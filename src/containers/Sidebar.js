@@ -1,18 +1,20 @@
 import '../App.css';
-import { Home } from 'react-iconly'
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
+    const state = useSelector((state) => state.cartProducts)
     return (
         <div className="sidebar-container">
             <div className="sidebar-logo">
                 <img src='/shoppy.png' alt='logo' />
             </div>
             <div className='sidebar-details'>
-                <div className='sidebar-item'>Dashboard</div>
+                <div className='sidebar-item'><Link to={"/"} style={{textDecoration: "none", color: "#737373"}}>Dashboard</Link></div>
                 <div className='sidebar-item'>Wallet</div>
                 <div className='sidebar-item'>Notifications</div>
                 <div className='sidebar-item'>Saved items</div>
-                <div className='sidebar-item'>Cart</div>
+                <div className='sidebar-item'>Cart({state.length})</div>
                 <div className='sidebar-item'>Wishlist</div>
                 <hr />
                 <div className='sidebar-bottom'>

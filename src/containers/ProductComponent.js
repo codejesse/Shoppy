@@ -1,11 +1,17 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Error from "./Error";
 
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
+    if(products.length === 0) {
+        return (
+            <Error />
+        )
+    } 
     const renderList = products.map((product) => {
         const { id, title, price, category, image } = product;
-
+        
         return (
             <div className="testing row centered" key={id}>
                 <Link to={`/product/${id}`}>

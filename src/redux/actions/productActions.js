@@ -14,6 +14,12 @@ export const selectedProducts = (product) => {
     }
 }
 
+export const removeSelectedProduct = () => {
+    return {
+      type: ActionTypes.REMOVE_SELECTED_PRODUCTS,
+    };
+  };
+
 export const cartProducts = (product) => {
     return {
         type: ActionTypes.CART_PRODUCTS,
