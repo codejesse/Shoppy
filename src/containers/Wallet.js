@@ -92,6 +92,9 @@ const ActivityCard = styled.div`
     flex-direction: row;
     width: 100%;
     margin: auto;
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 const ActivityDetails = styled.div`

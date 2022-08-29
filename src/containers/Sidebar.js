@@ -14,8 +14,7 @@ const Sidebar = () => {
                 <div className='sidebar-item'>Wallet</div>
                 <div className='sidebar-item'>Notifications</div>
                 <div className='sidebar-item'>Saved items</div>
-                <div className='sidebar-item'>Cart({state.length})</div>
-                <div className='sidebar-item'>Wishlist</div>
+                <div className='sidebar-item'><Link to={"/cart"} style={{textDecoration: "none", color: "#737373"}}>Cart({state.length})</Link></div>
                 <hr />
                 <div className='sidebar-bottom'>
                     <div className='sidebar-profile'>

@@ -1,7 +1,7 @@
 import { ActionTypes } from "../constants/action-types"
 
 const initialState = {
-  products: []
+  products: [],
 }
 
 export const productReducer = (state = initialState, { type, payload }) => {
@@ -29,10 +29,11 @@ const Cart = [];
 
 export const cartProductsReducer = (state = Cart, { type, payload }) => {
   let doesItemExist;
-  const product = payload;
+  // const product = payload;
   switch (type) {
     case ActionTypes.CART_PRODUCTS:
       //check if item already exists in cart
+      //if id matches just return item don't allow increment
       doesItemExist = false;
       const newState = state.map((item) => {
         if (item.Id === payload.Id) {
@@ -43,11 +44,13 @@ export const cartProductsReducer = (state = Cart, { type, payload }) => {
       })
       if (doesItemExist) {
         // return newState;
-        console.log(newState)
+        console.log(state)
       }
+      // console.log(newState)
       return [...state, { ...payload, quantity: 1 }];
     case ActionTypes.DELETE_PRODUCTS:
       break;
+      
     default:
       return state;
   }

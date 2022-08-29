@@ -449,3 +449,110 @@ body {
     justify-content: center;
     height: 100vh;
 }
+
+.cart-content {
+    display: flex;
+    width: 100%;
+    font-family: 'Clash Display';
+    font-style: normal;
+    color: #212427;
+    margin: 15rem;
+    border: red;
+}
+
+.cart-fallback {
+    display: flex;
+    border: red;
+    width: 100%;
+}
+
+.empty-cart {
+    display: flex;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: #212427;
+    padding: 12rem;
+    height: auto;
+    justify-content: center;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    padding: 13rem;
+    height: auto;
+    border: 1px solid red;
+}
+
+.empty-cart-details {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    margin-left: 18rem;
+}
+
+.button-align {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    width: 100%;
+}
+
+.empty-cart-details button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background: #FFA234;
+    color: white;
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cart-wrapper {
+    /* border: 1px solid red; */
+    padding: 19rem;
+    margin: auto;
+    float: right;
+    width: 90%;
+    height: auto;
+}
+
+.cart-header {
+    font-family: 'Clash Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    margin-top: -7rem;
+    margin-bottom: 2rem;
+}
+
+.cart-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #737373;
+    height: 200px;
+    width: 841px;
+    height: 199px;
+    padding: 2rem;
+    border: 1px solid #EDEDED;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.cart-card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cart-card-details h1 {
+    /* work on it */
+    display: flex;
+    flex-direction: column;
+}
