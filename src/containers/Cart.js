@@ -20,12 +20,17 @@ const Cart = (props) => {
         return (
             <div className='cart-wrapper'>
                 <div className='cart-header'>Your Cart</div>
-                {props.items.map ((item) => (
+                {props.items.map((item) => (
                     <div className='cart-card' key={item.title}>
                         <img src={item.image} alt={item.title} />
                         <div className='cart-card-details'>
-                            <div>{item.title}</div>
+                            <div className='cart-title'>{item.title}</div>
                             <p>${item.price}</p>
+                            <div className='item-quantity'>
+                                <button>+</button>
+                                <div>{item.quantity} </div>
+                                <button>-</button>
+                            </div>
                         </div>
                     </div>
                 ))}

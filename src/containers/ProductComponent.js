@@ -1,8 +1,15 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Error from "./Error";
+import { cartProducts } from "../redux/actions/productActions";
 
 const ProductComponent = () => {
+    const dispatch = useDispatch();
+
+    const addProduct = (product) => {
+        dispatch(cartProducts(product))
+    }
+
     const products = useSelector((state) => state.allProducts.products);
     if(products.length === 0) {
         return (
@@ -25,7 +32,7 @@ const ProductComponent = () => {
                                 <div className="product-title">{title}</div>
                                 <div className="product-price">$ {price}</div>
                                 {/* <div className="product-chip">{category}</div> */}
-                                <button className="details-button">Add to cart</button>
+                                <button className="details-button" onClick={() => addProduct(product)}>Add to cart</button>
                             </div>
                         </div>
                     </div>
